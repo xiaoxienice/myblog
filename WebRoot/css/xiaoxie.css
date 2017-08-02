@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* CSS Document 
+ * 请勿修改本css文件
+ * 如需修改请重写
+ */
+/*------------公用------------*/
+body{
+	font-size: 14px;
+	background-color: rgb(247,248,250);
+}
+*{
+	margin: 0; padding: 0;
+}
+h1{ font-size: 28px;}
+h2{ font-size: 24px;}
+h3{ font-size: 20px;}
+p{ font-size: 18px;}
+a{ text-decoration: none; color: #000;}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+img{ width: 100%;}
+/*------------导航------------*/
+nav{
+	padding: 5px 0;
+	text-align: center;
+	background-color: rgba(7,104,202,0.8);
+}
+nav a{
+	display: inline-block;
+	font-size: 18px;
+	padding: 10px 20px;
+}
+nav a:link{
+	color: #fff;
+}
+nav a:hover{
+	font-weight: bold;
+}
+/*------------页脚------------*/
+footer{
+	padding: 20px 0;
+	text-align: center;
+}
+/*-------------返回顶部-------------*/
+.back-to-top{
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	padding: 10px 20px;
+}
+/*------------首页------------*/
+.wapper{
+	margin: 0 auto;
+	width: 1200px;
+	padding: 10px 0;
+}
+.main{
+	margin: 0 auto;
+	width: 900px;
+}
+.left{
+	width: 650px;
+	float: left;
+}
+article{
+	margin: 10px;
+	padding: 15px;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px #888888;
+}
+article h3{
+	padding: 10px 0;
+	font-weight: 600;
+	font-size: 17px;
+}
+article p{
+	font-size: 15px;
+}
+article span{
+	display: inline-block;
+	padding-top: 5px;
+	padding-right: 20px;
+}
+.center{
+	text-align: center;
+}
+.pt20{
+	padding-top: 20px;
+}
+.pl20{
+	padding-left: 20px;
+}
+.pr20{
+	padding-right: 20px;
+}
+.right{
+	width: 250px;
+	float: left;
+}
+.right ul{
+	list-style: none;
+}
+.right ul li{
+	display: block;
+	padding: 5px;
+}
+.right .block{
+	font-size: 16px;
+	margin: 10px 0;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px #888888;
+}
+.right .block span{
+	display: block;
+	padding: 10px 5px;
+}
+/*------------照片墙------------*/
+ #main{
+    position: relative;
+    margin: 0 auto;
+}
+.pin{
+    padding: 15px 0 0 15px;
+    float:left;
+}
+.box{
+    padding: 10px;
+    border:1px solid #ccc;
+    box-shadow: 0 0 6px #ccc;
+    border-radius: 5px;
+}
+.box img{
+    width:162px;
+    height:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
