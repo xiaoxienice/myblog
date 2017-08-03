@@ -4,11 +4,17 @@ import java.io.File;
 
 import com.jfinal.core.Controller;
 import com.xielei.common.Admin;
+import com.xielei.common.Article;
 
 public class IndexController extends Controller{
 	
+	static Article service = new Article();
+	
 	public void index(){
-		render("/web/index2.jsp");
+		int pageNumber = getParaToInt("pageNumber",1);
+		setAttr("list", service.paginate(pageNumber, 10));
+		render("/web/index.jsp");
+		//render("/web/index2.jsp");
 	}
 	
 	public void download(){ 

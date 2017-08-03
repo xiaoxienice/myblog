@@ -19,10 +19,10 @@
   <body>
 	<header>
 	  <nav>
-		<a href="index.html">首页</a>
-		<a href="article.html">文章</a>
-		<a href="photowall.html">摄影</a>
-		<a href="aboutme.html">关于我</a>
+		<a href="${ctx }/front/article/list">首页</a>
+		<a href="${ctx }/front/article/list">文章</a>
+		<a href="${ctx }/front/article/list">摄影</a>
+		<a href="${ctx }/front/article/list">关于我</a>
 	  </nav>
 	</header>
 	<div class="wapper">

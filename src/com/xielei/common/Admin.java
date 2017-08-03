@@ -8,4 +8,8 @@ import com.xielei.common.model.BaseAdmin;
 @SuppressWarnings("serial")
 public class Admin extends BaseAdmin<Admin> {
 	public static final Admin dao = new Admin().dao();
+	
+	public Admin login(String nickname,String password){
+		return dao.findFirst("select * from admin where nickname = ? and password = ? ",nickname,password);
+	}
 }

@@ -10,7 +10,7 @@ public class FrontRoutes extends Routes{
 	@Override
 	public void config() {
 		/*前端*/
-		add("/front/index", IndexController.class);
+		add("/front", IndexController.class);
 		add("/front/article", ArticleController.class);
 		add("/front/photowall", PhotoWallController.class);
 	}
