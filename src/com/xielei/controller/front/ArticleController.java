@@ -29,7 +29,8 @@ public class ArticleController extends Controller{
 	 * 文章详情
 	 */
 	public void detail(){
-		setAttr("item", service.findById(getParaToInt("id")));
+		int id = getParaToInt("id");
+		setAttr("item", service.findById1(id));
 		render("/web/article.jsp");
 	}
 }

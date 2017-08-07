@@ -32,7 +32,7 @@
 		    <article onclick="goDetails(${item.id})">
 			  <h3>${item.title }</h3>
 			  <p>${item.content }</p>
-			  <span>发布时间:&nbsp;&nbsp;${item.addtime }</span>
+			  <span>发布时间:&nbsp;&nbsp; <fmt:formatDate type="both" value="${item.addtime }" /></span>
 			  <span>浏览量:&nbsp;&nbsp;${item.like }</span>
 			</article>
 		  </c:forEach>

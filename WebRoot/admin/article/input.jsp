@@ -106,13 +106,13 @@
 					  </div>
 					  <div class="am-form-group">
 				    	<div class="am-g">
-					      <label class="am-u-md-2 am-md-text-right am-padding-left-0" for="doc-ta-1">内容</label>
-					      <textarea name="content" class="am-u-md-10 form-control" rows="5" id="doc-ta-1">${article.content }</textarea>
+					      <label class="am-u-md-2 am-md-text-right am-padding-left-0">内容</label>
+					      <textarea name="content" id="editor" style="height:400px;width:100%;margin-top:26px;">${article.content }</textarea>
 				    	</div>
 				      </div>
 				      <div class="am-form-group">
 				    	<div class="am-g">
-				    	  <a href="javascript:window.history.go(-1);">返回</a>
+				    	  <a class="am-btn am-btn-default" href="javascript:window.history.go(-1);">返回</a>
 					      <button type="button" class="am-btn am-btn-default btn-submit">保存</button>
 				    	</div>
 				      </div>
@@ -131,23 +131,26 @@
 	<script type="text/javascript" src="${ctx }/js/jquery-2.1.0.js" ></script>
 	<script type="text/javascript" src="${ctx }/js/amazeui.min.js"></script>
 	<script type="text/javascript" src="${ctx }/js/blockUI.js" ></script>
+	<script type="text/javascript" src="${ctx }/js/ueditor/ueditor.config.js" ></script>
+	<script type="text/javascript" src="${ctx }/js/ueditor/ueditor.all.js" ></script>
 	<script type="text/javascript">
-	  $(document).ready(function(){
-		  $(".btn-submit").click(function(){
-			  $.ajax({
-		          type: "post", 
-		          url: "${ctx }/admin/article/save", 
-		          data: $("#dataForm").serialize(),
-		          dataType: "json", 
-		          success: function (data) {
-			          alert(data.msg);
-			          if (data.code==1) {
-			        	  window.location.href="${ctx }/admin/article/list";
-					  }
-			      }
-			  }); 
-		  });
-	  });
+	var ue = UE.getEditor('editor');  
+	$(document).ready(function(){
+		$(".btn-submit").click(function(){
+			$.ajax({
+		        type: "post", 
+		        url: "${ctx }/admin/article/save", 
+		        data: $("#dataForm").serialize(),
+		        dataType: "json", 
+		        success: function (data) {
+			        alert(data.msg);
+			        if (data.code==1) {
+			        	window.location.href="${ctx }/admin/article/list";
+					}
+			    }
+			}); 
+		});
+	});
 	</script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 package com.xielei.common;
 
+import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Page;
 import com.xielei.common.model.BaseArticle;
 
@@ -14,7 +15,8 @@ public class Article extends BaseArticle<Article> {
 		return dao.paginate(pageNumber, pageSize, "SELECT *", "FROM article ORDER BY addtime DESC");
 	}
 	
-	public Article findById(int id) {
+	public Article findById1(int id) {
+		Db.update("update article set `like`=`like`+1 where id = ? ",id);
 		return dao.findById(id);
 	}
 	

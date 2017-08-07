@@ -31,7 +31,7 @@
 		  <article>
 			<h3 class="center">${item.title }</h3>
 			<div class="center">
-			  <span>发布时间:&nbsp;&nbsp;${item.addtime }</span>
+			  <span>发布时间:&nbsp;&nbsp;<fmt:formatDate type="both" value="${item.addtime }" /></span>
 			  <span>浏览量:&nbsp;&nbsp;${item.like }</span>
 			</div>
 			<p class="pt20 pl20 pr20">
